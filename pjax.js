@@ -14,7 +14,7 @@ module.exports = function() {
         }
       }
 
-      res.render(view, options, fn);
+      res.partialRender(view, options, fn);
     };
 
     next();
