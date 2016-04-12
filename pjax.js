@@ -13,7 +13,8 @@ module.exports = function() {
           options.layout = false;
         }
       }
-
+      
+      options['isiPhone'] = req.useragent.isiPhone ||req.useragent.isiPad || req.useragent.isiPod;
       res.partialRender(view, options, fn);
     };
 
