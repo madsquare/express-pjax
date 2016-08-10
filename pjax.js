@@ -15,7 +15,7 @@ module.exports = function () {
       }
 
       options['isiPhone'] = req.useragent.isiPhone || req.useragent.isiPad || req.useragent.isiPod
-      options['isSnackkApp'] = req.useragent.source.indexOf('snackk_app') !== -1 || req.useragent.source.indexOf('FBAN') !== -1
+      options['isSnackkApp'] = req.useragent.source.indexOf('snackk_app') !== -1 && req.useragent.source.indexOf('FBAN') !== -1
       res.partialRender(view, options, fn)
     }
 
